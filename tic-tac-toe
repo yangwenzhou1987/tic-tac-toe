@@ -6,14 +6,15 @@ public class TicTacToe {
   private int n;
   
   /**Initialize data structure here. */
-  public TicTacToe(int n){
+  public TicTacToe(int n) {
      this.n = n;
      rows = new int[n];
      cols = new int[n];
      diag = 0;
      xdiag = 0;
+  }
      
-  /**Player makes a move at ({row}, {col}) */
+  /**Player makes a move at ({row}, {col}). */
   public int move(int row, int col, int player) {
      int count = player == 1 ? 1 : -1;
      
@@ -30,8 +31,8 @@ public class TicTacToe {
      }
      
      //If any of them equals to n, return the win player
-     if(Math.abs(rows[row]) == n || Math.abs(cols[col]) == n || Math.abs(diag) == n || Math.abs(xdiag) == n){
-       return count > 0 ? 1 : 2;
+     if(Math.abs(rows[row]) == n || Math.abs(cols[col]) == n || Math.abs(diag) == n || Math.abs(xdiag) == n) {
+        return count > 0 ? 1 : 2;
      }
      
      return 0;
